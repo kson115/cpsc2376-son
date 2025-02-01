@@ -93,9 +93,7 @@ int main()
         case 6:
             std::cout << "Exit" << std::endl;
             return 0;
-
-        }
-        
+        }        
     }
 }
 
