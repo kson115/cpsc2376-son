@@ -35,7 +35,6 @@ namespace practice03test
             Assert::AreEqual(5, MathUtils::findMax({ 5, 5, 5 }));       // case 3: All same elements 
             Assert::AreEqual(10, MathUtils::findMax({ 10 }));           // case 4: Single element
             Assert::AreEqual(-7, MathUtils::findMax({ -20, -10, -7}));  // case 5: All negative elements
-            Assert::AreEqual(3, MathUtils::findMax({ 1, 3, 3, 2}));     // case 6: Vector with zeros and positive elements
-        }
+            Assert::AreEqual(3, MathUtils::findMax({ 1, 3, 3, 2}));     // case 6: numbers[1] = maxValue; numbers[2] = maxValue
     };
 }
