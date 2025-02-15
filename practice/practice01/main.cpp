@@ -2,9 +2,9 @@
 #include <vector>
 
 // Function to print the vector
-void printVector(const std::vector<int>& numbers) 
+void printVector(const std::vector<int>& numbers)
 {
-    for (int i = 0; i < numbers.size(); i++) 
+    for (int i = 0; i < numbers.size(); i++)
     {
         std::cout << numbers.at(i) << " ";
     }
@@ -13,17 +13,17 @@ void printVector(const std::vector<int>& numbers)
 // Function to double the vector
 void doubleVector(std::vector<int>& numbers)
 {
-    for (int i = 0; i < numbers.size();i++)
-    {       
-        std::cout << numbers.at(i)*2 << " ";
+    for (int i = 0; i < numbers.size(); i++)
+    {
+        std::cout << numbers.at(i) * 2 << " ";
     }
 }
 
 // Function to calculate the sum of a vector
-int calculateSum(const std::vector<int>& numbers) 
+int calculateSum(const std::vector<int>& numbers)
 {
     int sum = 0;
-    for (int i = 0; i < numbers.size(); i++) 
+    for (int i = 0; i < numbers.size(); i++)
     {
         sum += numbers.at(i);
     }
@@ -31,24 +31,24 @@ int calculateSum(const std::vector<int>& numbers)
 }
 
 // Function to print multiples of a user-defined value
-void printMultiples(const std::vector<int>& numbers, int value) 
+void printMultiples(const std::vector<int>& numbers, int value)
 {
-    for (int i = 0; i < numbers.size(); i++) 
+    for (int i = 0; i < numbers.size(); i++)
     {
-        if (numbers.at(i) % value == 0) 
+        if (numbers.at(i) % value == 0)
         {
             std::cout << numbers.at(i) << " ";
         }
     }
 }
 
-int main() 
+int main()
 {
     std::vector<int> numbers = { 10, 20, 30, 40, 50 };
     int input, num, value;
     int sum = calculateSum(numbers);
 
-    while (true) 
+    while (true)
     {
         std::cout << "Menu options:\n";
         std::cout << "1. Add an item to the vector\n";
@@ -69,7 +69,7 @@ int main()
             numbers.push_back(num);
             numbers.push_back(num);
             numbers.push_back(num);
-            std::cout << "Vector size after adding elements: " << numbers.size() << std::endl;           
+            std::cout << "Vector size after adding elements: " << numbers.size() << std::endl;
             std::cout << std::endl;
             break;
         case 2:
@@ -80,7 +80,7 @@ int main()
             doubleVector(numbers);
             std::cout << std::endl;
             break;
-        case 4:            
+        case 4:
             std::cout << "Sum: " << sum << std::endl;
             std::cout << std::endl;
             break;
@@ -93,13 +93,6 @@ int main()
         case 6:
             std::cout << "Exit" << std::endl;
             return 0;
-        }        
+        }
     }
 }
-
-
-
-
-
-
-
