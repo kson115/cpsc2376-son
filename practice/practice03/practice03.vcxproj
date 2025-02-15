@@ -135,9 +135,6 @@
     <ClInclude Include="mathyStuff.h" />
     <ClInclude Include="practice03.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\..\OneDrive\Pictures\proof.png" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
