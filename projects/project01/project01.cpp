@@ -78,7 +78,7 @@ void printRules()
 {
     std::cout << "Welcome to a turn-based, grid-based Connect Four game!\n";
     std::cout << "Two players take turns to place their marks (Player 1: O, Player 2: X) on the grid.\n";
-    std::cout << "Winning needs four marks in a row (horizontally, vertically, or diagonally).\n";
+    std::cout << "Winning needs five marks in a row (horizontally, vertically, or diagonally).\n";
 }
 
 std::vector<std::vector<GameToken>> makeBoard(int rows, int cols)
