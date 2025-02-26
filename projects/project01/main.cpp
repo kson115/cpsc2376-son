@@ -251,5 +251,15 @@ GameState gameStatus(const std::vector<std::vector<GameToken>>& board)
     return GameState::DRAW;
 }
 
-// This is a lecture-based Gomoku game template modified with Ai-created gameStatus function, 
-// Then modified again to a Connect Four game.
+// Lecture-based template modified with Ai-created gameStatus function 
+
+
+
+
+
+
+
+
+
+
+
