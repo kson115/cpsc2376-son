@@ -137,5 +137,3 @@ int main()
     }
     return 0;
 }
-
-// Template was created by Ai and modified
