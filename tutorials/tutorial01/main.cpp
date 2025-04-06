@@ -1,25 +1,23 @@
-//Dynamic Memory Allocation
-//File : PointersPart5.cpp
-
 #include <iostream>
+#include <array>
 
 int main() {
-    // Allocate integer on the heap
-    int* dyn = new int(42);
-    std::cout << "Dynamically allocated value: " << *dyn << std::endl;
-    std::cout << "Address of dyn: " << dyn << std::endl;
+    std::array<int, 5> arr = { 1, 2, 3, 4, 5 };
 
-    // Modify the allocated integer
-    *dyn = 100;
-    std::cout << "Modified value: " << *dyn << std::endl;
+    // Pointer to the first element of arr
+    int* p = arr.data();
+    std::cout << "Initial pointer p: " << p
+        << " | *p: " << *p << std::endl;
 
-    // Clean up
-    delete dyn;
-    dyn = nullptr; // Prevent dangling pointer
+    // Move pointer to the next element
+    p++;
+    std::cout << "After p++: " << p
+        << " | *p: " << *p << std::endl;
 
-    if (!dyn) {
-        std::cout << "dyn is now nullptr after deletion." << std::endl;
-    }
+    // Move pointer two more elements
+    p += 2;
+    std::cout << "After p += 2: " << p
+        << " | *p: " << *p << std::endl;
 
     return 0;
 }
