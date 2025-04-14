@@ -82,7 +82,7 @@ private:
 
 
      ```markdown
-     [Link to design.md](raw.githubusercontent.com/kson115/cpsc2376-son/5eed4e797bb26c0d56a09b9007c6f788aaf406f1/practice/practice11/design.md)
+     [Link to design.md](https://github.com/kson115/cpsc2376-son/commit/adadeb20f112e83b519a31af47f46095af6fd726#diff-e779f4d033de15e4ce898074291e30303a1b0379c5a068a5e7bd43450b9030c1)
      ```
 
 📊 Class Diagram (Mermaid)
