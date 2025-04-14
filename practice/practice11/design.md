@@ -80,9 +80,7 @@ private:
     std::vector<std::shared_ptr<Loan>> activeLoans;
 };
 
-markdown
 
-![Mermaid Diagram](classDiagram.png)
       
 📊 Class Diagram (Mermaid)
 
@@ -130,7 +128,9 @@ classDiagram
     LendingSystem --> Customer : manages
     LendingSystem --> Loan : tracks
 
+markdown
 
+![Mermaid Diagram](classDiagram.png)
 
 
 
