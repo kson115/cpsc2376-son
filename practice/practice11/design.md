@@ -80,10 +80,10 @@ private:
     std::vector<std::shared_ptr<Loan>> activeLoans;
 };
 
+markdown
 
-     ```markdown
-     [Link to design.md](https://github.com/kson115/cpsc2376-son/blob/main/practice/practice11/design.md)
-     ```
+![Mermaid Diagram](classDiagram.png)
+     
 
 📊 Class Diagram (Mermaid)
 
