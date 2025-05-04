@@ -29,9 +29,9 @@ class GradeNotifier : public GradeObserver
 public:
     void update(float grade) override 
     {
-        if (grade < 80) 
+        if (grade < 60) 
         {
-            std::cout << "Email sent to student@example.com: Your grade dropped below 90%!" << std::endl;
+            std::cout << "Email sent to student@example.com: Your grade dropped below 60%!" << std::endl;
         }
     }
 };
@@ -68,7 +68,7 @@ int main()
     gradeBook.addObserver(notifier);
 
     gradeBook.setGrade(85);
-    gradeBook.setGrade(75);
+    gradeBook.setGrade(55);
 
     return 0;
 }
