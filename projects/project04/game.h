@@ -4,20 +4,11 @@
 #include <vector>
 #include <SDL2/SDL.h>
 
-enum GameStatus {
-    ONGOING,
-    DRAW,
-    WIN_PLAYER_1,
-    WIN_PLAYER_2
-};
+enum GameStatus {ONGOING,DRAW,WIN_PLAYER_1,WIN_PLAYER_2};
+enum Player {NONE = 0,PLAYER_1,PLAYER_2};
 
-enum Player {
-    NONE = 0,
-    PLAYER_1,
-    PLAYER_2
-};
-
-class Game {
+class Game 
+{
 public:
     Game(int rows, int cols, int winLength);
     void play(int col);

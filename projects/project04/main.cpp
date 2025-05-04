@@ -7,9 +7,11 @@
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 
-void renderText(SDL_Renderer* renderer, const std::string& text, int x, int y) {
+void renderText(SDL_Renderer* renderer, const std::string& text, int x, int y) 
+{
     TTF_Font* font = TTF_OpenFont("C:\\Windows\\Fonts\\arial.ttf", 24);
-    if (!font) {
+    if (!font) 
+    {
         std::cerr << "Failed to load font: " << TTF_GetError() << std::endl;
         return;
     }
@@ -26,7 +28,8 @@ void renderText(SDL_Renderer* renderer, const std::string& text, int x, int y) {
     TTF_CloseFont(font);
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) 
+{
     SDL_Init(SDL_INIT_VIDEO);
     TTF_Init();
 
@@ -46,12 +49,16 @@ int main(int argc, char* argv[]) {
     const int offsetX = (SCREEN_WIDTH - cols * cellSize) / 2;
     const int offsetY = (SCREEN_HEIGHT - rows * cellSize) / 2;
 
-    while (!quit) {
+    while (!quit) 
+    {
         SDL_Event e;
-        while (SDL_PollEvent(&e)) {
+        while (SDL_PollEvent(&e)) 
+        {
             if (e.type == SDL_QUIT) quit = true;
-            else if (e.type == SDL_KEYDOWN) {
-                switch (e.key.keysym.sym) {
+            else if (e.type == SDL_KEYDOWN) 
+            {
+                switch (e.key.keysym.sym) 
+                {
                 case SDLK_LEFT:
                     if (!gameOver) selectedCol = std::max(0, selectedCol - 1);
                     break;
@@ -60,9 +67,11 @@ int main(int argc, char* argv[]) {
                     break;
                 case SDLK_RETURN:
                 case SDLK_SPACE:
-                    if (!gameOver) {
+                    if (!gameOver) 
+                    {
                         game.play(selectedCol);
-                        if (game.getCurrentPlayer() == PLAYER_2 && game.status() == ONGOING) {
+                        if (game.getCurrentPlayer() == PLAYER_2 && game.status() == ONGOING) 
+                        {
                             SDL_Delay(300);
                             game.aiMove();
                         }
@@ -78,11 +87,14 @@ int main(int argc, char* argv[]) {
                     break;
                 }
             }
-            else if (e.type == SDL_MOUSEBUTTONDOWN && !gameOver) {
+            else if (e.type == SDL_MOUSEBUTTONDOWN && !gameOver) 
+            {
                 int col = (e.button.x - offsetX) / cellSize;
-                if (col >= 0 && col < cols) {
+                if (col >= 0 && col < cols) 
+                {
                     game.play(col);
-                    if (game.getCurrentPlayer() == PLAYER_2 && game.status() == ONGOING) {
+                    if (game.getCurrentPlayer() == PLAYER_2 && game.status() == ONGOING) 
+                    {
                         SDL_Delay(300);
                         game.aiMove();
                     }
@@ -97,15 +109,18 @@ int main(int argc, char* argv[]) {
         game.draw(renderer, cellSize, offsetX, offsetY);
 
         // Selector
-        if (!gameOver) {
+        if (!gameOver) 
+        {
             SDL_Rect selector = { offsetX + selectedCol * cellSize, offsetY - 10, cellSize, 10 };
             SDL_SetRenderDrawColor(renderer, 255, 255, 0, 255);
             SDL_RenderFillRect(renderer, &selector);
         }
 
-        if (gameOver) {
+        if (gameOver) 
+        {
             std::string msg;
-            switch (game.status()) {
+            switch (game.status()) 
+            {
             case WIN_PLAYER_1: msg = "Player 1 (Red) Wins! Press R."; break;
             case WIN_PLAYER_2: msg = "AI (Blue) Wins! Press R."; break;
             case DRAW: msg = "Draw! Press R."; break;
@@ -125,3 +140,5 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+
+//AI-assisted SDL
